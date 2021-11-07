@@ -6,28 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bazi XO</title>
     <style>
-        #board{
-            width: 300px;
-            height: 300px;
-            border: 1px #eeee solid;
-        }
-        .cell {
-            display: block;
-            width: 98px;
-            height: 98px;
-            border: 1px #99999999 solid;
-            float: left;
-            cursor: pointer;
-            
-        }
-        .cell:hover{
-            background: lightcoral;
-        }
+      #board {
+        width: 300px;
+        height: 300px;
+        border: 1px #eeee solid;
+      }
+      .cell {
+        display: block;
+        width: 98px;
+        height: 98px;
+        border: 1px #99999999 solid;
+        float: left;
+        cursor: pointer;
+        font-size: 70px;
+        text-align: center;
+        line-height: 98px;
+      }
+      .cell.fill-x,.cell.fill-o{
+        cursor: not-allowed;
 
+      }
+      .cell.fill-x::after {
+          content: "X"; 
+          color: red;
+      }
+      .cell.fill-o::after {
+          content: "O";
+          color: blue;
+      }
+      .cell:hover {
+        background: lightcoral;
+      }
+      .highlight{
+          background: rgb(182, 135, 226)!important
+      }
     </style>
   </head>
   <body>
-    <h1>Game XO</h1>
+    <h1 id="mesage"></h1>
 
     <div id="board">
       <a class="cell"></a>
@@ -39,11 +55,7 @@
       <a class="cell"></a>
       <a class="cell"></a>
       <a class="cell"></a>
-
     </div>
-    <script>
-        document.querySelector
-
-    </script>
+    <script src="./js.js" type="text/javascript"></script>
   </body>
 </html>
